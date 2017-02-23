@@ -1,0 +1,510 @@
+CameraFile (6.72) {
+   Manufacturer (Basler)
+   Model (spL4096-140km)
+   CreationDate (20111208140406)
+   InterfaceInfo (1433) {
+      AcquisitionWindow (0, 0, 4096, 1000)
+      BinaryThreshold (0, 200)
+      BitDepth (8)
+      BitsPerComponent (8)
+      NumComponents (1)
+      NumPhantomComponents (0)
+      Unsigned16BitImage (No)
+      FrameTimeout (3000)
+      LUT (Normal)
+      LUTTransform (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+      MaxImageSize (4096, 32000)
+      ScanType (LineScan)
+      Scaling (1)
+      DetectPCLK (Yes)
+      EnablePoCL (No)
+      FastRearm (Yes)
+      SynchronizeEnables (No)
+      ConfigDelay (0)
+      Interlaced (No)
+      Serial {
+         Baud (9600)
+         SerialDisabled (No)
+         Databits (8)
+         Parity (N)
+         DTR (High)
+         RTS (High)
+         Stopbits (1)
+         TermChars (\x06)
+      }
+      SignalLevels {
+         PGOutput (RS422)
+      }
+      ControlLinesSource {
+         UseDefaultSource (No)
+         CCSourceLine0 (External, 0)
+         CCSourceLine1 (None, 1)
+         CCSourceLine2 (None, 2)
+         CCSourceLine3 (None, 3)
+      }
+      Bayer {
+         Pattern (None)
+         Algorithm (Bilinear)
+         RedGain (1.000000)
+         GreenGain (1.000000)
+         BlueGain (1.000000)
+      }
+      TestImageType (None)
+      TestImageFrameBlanking (100)
+      TestImageLineBlanking (100)
+      NumCameraTaps (8)
+      NumCameraXZones (1)
+      NumCameraTapsPerXZone (8)
+      NumCameraYZones (1)
+      NumCameraTapsPerYZone (1)
+      BitMapping (Standard)
+      TimeSlots (1)
+      InterleaveYZones (No)
+      XZonePixelExtractor (Left)
+      YZonePixelExtractor (Top)
+      NeedYChip (Yes)
+      NeedZChip (Yes)
+      LVALHighTrue (Yes)
+      FVALHighTrue (Yes)
+      DVALHighTrue (Yes)
+      DVALMode (1)
+      AcquisitionBitstream (Class07.dat)
+      Tap (0) {
+         Position (Normal)
+         Start (Left, Top)
+      }
+   }
+   InterfaceInfo (1435) {
+      AcquisitionWindow (0, 0, 4096, 1000)
+      BinaryThreshold (0, 200)
+      BitDepth (8)
+      BitsPerComponent (8)
+      NumComponents (1)
+      NumPhantomComponents (0)
+      Unsigned16BitImage (No)
+      FrameTimeout (3000)
+      LUT (Normal)
+      LUTTransform (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+      MaxImageSize (4096, 32000)
+      ScanType (LineScan)
+      Scaling (1)
+      DetectPCLK (Yes)
+      EnablePoCL (No)
+      FastRearm (Yes)
+      SynchronizeEnables (No)
+      ConfigDelay (0)
+      Interlaced (No)
+      Serial {
+         Baud (9600)
+         SerialDisabled (No)
+         Databits (8)
+         Parity (N)
+         DTR (High)
+         RTS (High)
+         Stopbits (1)
+         TermChars (\x06)
+      }
+      SignalLevels {
+         PGOutput (RS422)
+      }
+      ControlLinesSource {
+         UseDefaultSource (No)
+         CCSourceLine0 (External, 0)
+         CCSourceLine1 (None, 1)
+         CCSourceLine2 (None, 2)
+         CCSourceLine3 (None, 3)
+      }
+      Bayer {
+         Pattern (None)
+         Algorithm (Bilinear)
+         RedGain (1.000000)
+         GreenGain (1.000000)
+         BlueGain (1.000000)
+      }
+      TestImageType (None)
+      TestImageFrameBlanking (100)
+      TestImageLineBlanking (100)
+      NumCameraTaps (8)
+      NumCameraXZones (1)
+      NumCameraTapsPerXZone (8)
+      NumCameraYZones (1)
+      NumCameraTapsPerYZone (1)
+      BitMapping (Standard)
+      TimeSlots (1)
+      InterleaveYZones (No)
+      XZonePixelExtractor (Left)
+      YZonePixelExtractor (Top)
+      NeedYChip (Yes)
+      NeedZChip (Yes)
+      LVALHighTrue (Yes)
+      FVALHighTrue (Yes)
+      DVALHighTrue (Yes)
+      DVALMode (1)
+      AcquisitionBitstream (Class08.dat)
+      Tap (0) {
+         Position (Normal)
+         Start (Left, Top)
+      }
+   }
+   Pattern {
+      Action (PG) {
+         Line (0) {
+            Start (Low)
+            Idle (Low)
+         }
+         Line (1) {
+            Start (Low)
+            Idle (Low)
+         }
+         Line (2) {
+            Start (Low)
+            Idle (Low)
+         }
+         Line (3) {
+            Start (Low)
+            Idle (Low)
+         }
+         Line (4) {
+            Start (Low)
+            Idle (Low)
+         }
+         Clock (0x78)
+      }
+   }
+   CameraReset {
+      Action (Serial) {
+         Command (\x01\x00\x01\x01\x39\x0E\x03)
+         Response (\x06)
+      }
+   }
+   Attribute (Bit Depth) {
+      Value (List) {
+         Name (8-bits) {
+            Action (Interface, 1435) {
+               BitDepth (8)
+               BitsPerComponent (8)
+               NumCameraTaps (8)
+               NumCameraTapsPerXZone (8)
+               NeedYChip (Yes)
+               NeedZChip (Yes)
+               AcquisitionBitstream (Class08.dat)
+            }
+            Action (Interface, 1433) {
+               BitDepth (8)
+               BitsPerComponent (8)
+               NumCameraTaps (8)
+               NumCameraTapsPerXZone (8)
+               NeedYChip (Yes)
+               NeedZChip (Yes)
+               AcquisitionBitstream (Class07.dat)
+            }
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x17\x11\x03)
+               Response (\x06)
+            }
+         }
+         Name (10-bits) {
+            Action (Interface, 1435) {
+               BitDepth (10)
+               BitsPerComponent (10)
+               NumCameraTaps (4)
+               NumCameraTapsPerXZone (4)
+               NeedYChip (Yes)
+               NeedZChip (No)
+               AcquisitionBitstream (Class08.dat)
+            }
+            Action (Interface, 1433) {
+               BitDepth (10)
+               BitsPerComponent (10)
+               NumCameraTaps (4)
+               NumCameraTapsPerXZone (4)
+               NeedYChip (Yes)
+               NeedZChip (No)
+               AcquisitionBitstream (Class07.dat)
+            }
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x17\x12\x03)
+               Response (\x06)
+            }
+         }
+         Name (12-bits) {
+            Action (Interface, 1435) {
+               BitDepth (12)
+               BitsPerComponent (12)
+               NumCameraTaps (4)
+               NumCameraTapsPerXZone (4)
+               NeedYChip (Yes)
+               NeedZChip (No)
+               AcquisitionBitstream (Class08.dat)
+            }
+            Action (Interface, 1433) {
+               BitDepth (12)
+               BitsPerComponent (12)
+               NumCameraTaps (4)
+               NumCameraTapsPerXZone (4)
+               NeedYChip (Yes)
+               NeedZChip (No)
+               AcquisitionBitstream (Class07.dat)
+            }
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x17\x13\x03)
+               Response (\x06)
+            }
+         }
+         Default (8-bits)
+         Current (8-bits)
+      }
+   }
+   Attribute (Line Acquisition Mode) {
+      Value (List) {
+         Name (Single Line [Max 70KHz]) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x00\x03)
+               Response (\x06)
+            }
+         }
+         Name (Dual Line [Max 140KHz] - Line A First) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x08\x03)
+               Response (\x06)
+            }
+         }
+         Name (Vertical Binning) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x02\x03)
+               Response (\x06)
+            }
+         }
+         Name (Line Sum - A Delayed) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x03\x03)
+               Response (\x06)
+            }
+         }
+         Name (Line Sum - B Delayed) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x04\x03)
+               Response (\x06)
+            }
+         }
+         Name (Line Averaging) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x05\x03)
+               Response (\x06)
+            }
+         }
+         Name (Line Avg - A Delayed) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x06\x03)
+               Response (\x06)
+            }
+         }
+         Name (Line Avg - B Delayed) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x36\x07\x03)
+               Response (\x06)
+            }
+         }
+         Default (Single Line [Max 70KHz])
+         Current (Single Line [Max 70KHz])
+      }
+   }
+   Attribute (Gain) {
+      Value (Integer) {
+         Min (2731)
+         Max (16383)
+         Increment (1)
+         Display {
+            Multiplier (1.000000)
+            Offset (0.000000)
+            Precision (0)
+            Units (4096 = 0dB)
+         }
+         Default (4096)
+         Current (4096)
+         Action (Serial) {
+            Command (\x01\x00\x02\x0D\x0E%^02r\x03)
+            Response (\x06)
+         }
+      }
+   }
+   Attribute (Offset) {
+      Value (Integer) {
+         Min (-4095)
+         Max (4095)
+         Increment (1)
+         Display {
+            Multiplier (1.000000)
+            Offset (0.000000)
+            Precision (0)
+            Units (-4095 to 4095)
+         }
+         Default (0)
+         Current (0)
+         Action (Serial) {
+            Command (\x01\x00\x02\x0D\x0F%^02r\x03)
+            Response (\x06)
+         }
+      }
+   }
+   Attribute (Horizontal Binning) {
+      Value (List) {
+         Name (Off) {
+            Action (Interface, 1435) {
+               MaxImageSize (4096, 32000)
+            }
+            Action (Interface, 1433) {
+               MaxImageSize (4096, 32000)
+            }
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x1B\x00\x03)
+               Response (\x06)
+            }
+         }
+         Name (On) {
+            Action (Interface, 1435) {
+               MaxImageSize (2048, 32000)
+            }
+            Action (Interface, 1433) {
+               MaxImageSize (2048, 32000)
+            }
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x1B\x01\x03)
+               Response (\x06)
+            }
+         }
+         Default (Off)
+         Current (Off)
+      }
+   }
+   Attribute (Test Image) {
+      Value (List) {
+         Name (Off) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x18\x00\x03)
+               Response (\x06)
+            }
+         }
+         Name (Still Gradient) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x18\x01\x03)
+               Response (\x06)
+            }
+         }
+         Name (Moving Gradient) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x18\x02\x03)
+               Response (\x06)
+            }
+         }
+         Name (Uniform Black) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x18\x03\x03)
+               Response (\x06)
+            }
+         }
+         Name (Uniform Gray) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x18\x04\x03)
+               Response (\x06)
+            }
+         }
+         Default (Off)
+         Current (Off)
+      }
+   }
+   Attribute (Exposure Control) {
+      Value (List) {
+         Name (Free Run) {
+            Action (Serial) {
+               Command (\x01\x00\x01\x01\x14\x02\x03)
+               Response (\x06)
+            }
+            Attribute (Exposure Time) {
+               Value (Integer) {
+                  Min (73)
+                  Max (10000)
+                  Increment (1)
+                  Display {
+                     Multiplier (0.100000)
+                     Offset (0.000000)
+                     Precision (1)
+                     Units (us)
+                  }
+                  Default (1000)
+                  Current (1000)
+                  Action (Serial) {
+                     Command (\x01\x00\x04\x0D\x16%^04r\x03)
+                     Response (\x06)
+                  }
+               }
+            }
+         }
+         Name (Triggered) {
+            Attribute (Exposure Mode) {
+               Value (List) {
+                  Name (Programmable) {
+                     Action (Serial) {
+                        Command (\x01\x00\x01\x01\x14\x05\x03)
+                        Response (\x06)
+                     }
+                     Attribute (Exposure time) {
+                        Value (Integer) {
+                           Min (20)
+                           Max (9952)
+                           Increment (1)
+                           Display {
+                              Multiplier (0.100000)
+                              Offset (0.000000)
+                              Precision (1)
+                              Units (us)
+                           }
+                           Default (1000)
+                           Current (1000)
+                           Action (PG) {
+                              Line (0) {
+                                 Start (Low)
+                                 1, 100
+                              }
+                           }
+                           Action (Serial) {
+                              Command (\x01\x00\x04\x0D\x15%^04r\x03)
+                              Response (\x06)
+                           }
+                        }
+                     }
+                  }
+                  Name (Level Controlled) {
+                     Action (Serial) {
+                        Command (\x01\x00\x01\x01\x14\x04\x03)
+                        Response (\x06)
+                     }
+                     Action (PG) {
+                        Line (0) {
+                           Start (Low)
+                           1, 100
+                        }
+                     }
+                  }
+                  Name (Edge Controlled) {
+                     Action (Serial) {
+                        Command (\x01\x00\x01\x01\x14\x06\x03)
+                        Response (\x06)
+                     }
+                     Action (PG) {
+                        Line (0) {
+                           Start (Low)
+                           1, 100
+                        }
+                     }
+                  }
+                  Default (Programmable)
+                  Current (Programmable)
+               }
+            }
+         }
+         Default (Free Run)
+         Current (Free Run)
+      }
+   }
+}
